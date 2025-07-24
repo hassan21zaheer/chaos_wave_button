@@ -57,20 +57,10 @@ class WaveButtonState extends State<WaveButton>
     super.dispose();
   }
 
-  // void _handleTap() async {
-  //   print('Attempting to vibrate');
-  //   await Haptics.vibrate(HapticsType.heavy);
-  //   print('Vibration attempted');
-  //   _controller.forward().then((_) => _controller.reverse());
-  //   widget.onTap?.call();
-  // }// Add to pubspec.yaml
-
   void _handleTap() async {
-    print('Attempting to vibrate');
-    if (await Vibration.hasVibrator() ?? false) {
+    if (await Vibration.hasVibrator() ) {
       Vibration.vibrate(duration: 200); // Vibrate for 200ms
     } else {
-      print('Device has no vibrator');
     }
     _controller.forward().then((_) => _controller.reverse());
     widget.onTap?.call();
@@ -183,7 +173,6 @@ class WavePainter extends CustomPainter {
           5.0 + random.nextDouble() * 5.0; // Random amplitude: 5–10
 
 // Draw wave-like line with segments
-      final path = Path();
       final points = <Offset>[];
       for (double x = 0; x <= size.width; x += 2.0) {
 // Calculate y with wave effect
@@ -286,11 +275,9 @@ class ChaosButtonState extends State<ChaosButton>
   }
 
   void _handleTap() async {
-    print('Attempting to vibrate');
-    if (await Vibration.hasVibrator() ?? false) {
+    if (await Vibration.hasVibrator()) {
       Vibration.vibrate(duration: 200); // Vibrate for 200ms
     } else {
-      print('Device has no vibrator');
     }
     _controller.forward().then((_) => _controller.reverse());
     widget.onTap?.call();

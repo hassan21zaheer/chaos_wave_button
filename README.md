@@ -1,7 +1,7 @@
 # Chaos Wave Button
 **Chaos Wave Button** is a dynamic Flutter package that brings captivating wave and electric current-like animations to your buttons. When tapped, the buttons display mesmerizing animated lines that flow or pulse, enhanced with neon metallic effects and vibrations. 
 
-![Chaos Wave Button](https://github.com/user-attachments/assets/125980ca-55b2-407a-b26e-6f5d3ed55f4b)
+![Chaos Wave Button](https://cdn.prod.website-files.com/64d71668db2966caf3153694/6881b061560f94bc24ed8fdf_chaoswavebutton.png)
 
 ## Features
 - **Wave and Electric Animations**: Features flowing wave patterns (WaveButton) and jagged electric current effects (ChaosButton) that animate on tap.
